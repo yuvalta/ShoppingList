@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Shopping List</string>
+    <string name="share_list_topbar_menu">Share List</string>
+    <string name="recent_list_topbar_menu">Recent Lists</string>
+    <string name="info_list_topbar_menu">Info</string>
+
 </resources>
