@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/resent_lists"
+        android:enabled="true"
+        android:title="@string/recent_list_topbar_menu" />
+    <item
+        android:id="@+id/share_list"
+        android:enabled="true"
+        android:title="@string/share_list_topbar_menu" />
+    <item
+        android:id="@+id/info"
+        android:enabled="true"
+        android:title="@string/info_list_topbar_menu" />
+
+</menu>
