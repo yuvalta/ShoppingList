@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="login_header">30sp</dimen>
+    <dimen name="login_body">20sp</dimen>
+    <dimen name="login_message">15sp</dimen>
+</resources>

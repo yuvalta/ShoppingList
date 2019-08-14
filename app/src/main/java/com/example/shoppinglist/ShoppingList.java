@@ -45,4 +45,8 @@ public class ShoppingList
     public void removeCategory(ProductCategory productCategory) {
         this.products.remove(productCategory);
     }
+
+    public void changeProductStatus(Product product) {
+        product.isChecked = !product.isChecked;
+    }
 }
