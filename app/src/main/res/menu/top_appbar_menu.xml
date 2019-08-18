@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/resent_lists"
+        android:id="@+id/recent_lists"
         android:enabled="true"
         android:title="@string/recent_list_topbar_menu" />
     <item
@@ -13,5 +13,9 @@
         android:id="@+id/info"
         android:enabled="true"
         android:title="@string/info_list_topbar_menu" />
+    <item
+        android:id="@+id/logout"
+        android:enabled="true"
+        android:title="@string/logout_list_topbar_menu" />
 
 </menu>

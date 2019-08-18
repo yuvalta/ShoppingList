@@ -6,5 +6,6 @@
     <string name="login_header">ShoppingList</string>
     <string name="login_body">Your old shopping list simplified</string>
     <string name="login_message">Please login with your google account</string>
+    <string name="logout_list_topbar_menu">Logout</string>
 
 </resources>

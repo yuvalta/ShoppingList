@@ -8,16 +8,22 @@ import java.util.List;
 public class ShoppingList
 {
     private HashMap<ProductCategory, List<Product>> products;
+    private ProductCategoryMapper productCategoryMapper;
 
     ShoppingList() {
-        this.products = new HashMap<>();
+        this.productCategoryMapper = ProductCategoryMapper.getInstance();
+        this.products = this.productCategoryMapper.getNewShoppingListProductMap();
     }
 
     ShoppingList(ShoppingList list) {
-        if(list != null) {
-            this.products = list.getProducts();
+        if(list == null) {
+            this.productCategoryMapper = ProductCategoryMapper.getInstance();
+            this.products = this.productCategoryMapper.getNewShoppingListProductMap();
         }
+        this.products = list.getProducts();
+        this.productCategoryMapper = ProductCategoryMapper.getInstance();
     }
+
     public HashMap<ProductCategory, List<Product>> getProducts() {
         return this.products;
     }
@@ -27,17 +33,12 @@ public class ShoppingList
             //TODO Null product Exception
             return;
         }
-        if(!this.products.containsKey(product.getCategory())) {
-            List<Product> newCategoryList = new ArrayList<>();
-            newCategoryList.add(product);
-            this.products.put(product.getCategory(), newCategoryList);
-            return;
-        }
-        this.products.get(product.getCategory()).add(product);
+        ProductCategory productCategory = this.productCategoryMapper.getProductCategory(product);
+        this.products.get(productCategory).add(product);
     }
 
     public void removeProduct(Product product) {
-        if(product != null && this.products.containsKey(product.getCategory())) {
+        if(product != null) {
             this.products.get(product.getCategory()).remove(product);
         }
     }

@@ -26,5 +26,6 @@ public enum ProductCategory
     Pharm,
     Coffee_Tea,
     Laundry,
-    Canned_Packaged
+    Canned_Packaged,
+    Not_Mapped
 }
